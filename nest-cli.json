@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "homie-lib": {
+      "type": "library",
+      "root": "libs/homie-lib",
+      "entryFile": "index",
+      "sourceRoot": "libs/homie-lib/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/homie-lib/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
+}

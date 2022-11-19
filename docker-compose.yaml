@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  homie-server:
+    container_name: homie-server
+    build:
+      context: .
+      dockerfile: ./apps/homie-server/Dockerfile
+      target: development
+    command: npx nx run homie-server:serve
+    env_file:
+      - ./apps/homie-server/.env
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '3009:3009'
+  user-auth-manager:
+    container_name: user-auth-manager
+    build:
+      context: .
+      dockerfile: ./apps/user-auth-manager/Dockerfile
+      target: development
+    command: npx nx run user-auth-manager:serve
+    env_file:
+      - ./apps/user-auth-manager/.env
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - '4040:4040'
