@@ -1,14 +1,14 @@
 version: '3.8'
 services:
-  homie-server:
-    container_name: homie-server
+  apartments-service:
+    container_name: apartments-service
     build:
       context: .
-      dockerfile: ./apps/homie-server/Dockerfile
+      dockerfile: ./apps/apartments-service/Dockerfile
       target: development
-    command: npx nx run homie-server:serve
+    command: npx nx run apartments-service:serve
     env_file:
-      - ./apps/homie-server/.env
+      - ./apps/apartments-service/.env
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
