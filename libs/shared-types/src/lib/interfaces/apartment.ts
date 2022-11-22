@@ -1,8 +1,10 @@
 import { ApartmentType } from "../enums/apartmentType";
 import { HouseType } from "../enums/houseType";
 import { OtherType } from "../enums/otherType";
+import { Purpose } from "../enums/Purpose";
 
-export interface AssetToSale {
+export interface Asset {
+    Purpose : Purpose
     city: string;
     address: string;
     number : number;
@@ -13,5 +15,6 @@ export interface AssetToSale {
     parkingLots: number;
     Description: string;
     SqrMeter: number;
-    
+    user_id : string;
+    creationDate: Date;
 }
