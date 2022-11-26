@@ -7,8 +7,7 @@ export interface Asset {
     Purpose : Purpose
     city: string;
     address: string;
-    number : number;
-    numberOfHouse : number | undefined;
+    houseNumber : number | undefined;
     AssetType: ApartmentType | HouseType | OtherType;
     numberOfRooms: number;
     price: number;
