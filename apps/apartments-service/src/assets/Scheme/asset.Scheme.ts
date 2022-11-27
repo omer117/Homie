@@ -20,7 +20,7 @@ export class Asset {
     @Prop({ required: true })
     houseNumber: number;
 
-    @Prop({ required: true })
+    @Prop({ required: true, type: String })
     AssetType: ApartmentType | HouseType | OtherType;
 
     @Prop({ required: true })
